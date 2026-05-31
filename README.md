@@ -1,16 +1,10 @@
-# 💳 VaultPay - Enterprise Payment Gateway
+# 💳 VaultPay
 
-[![Java](https://img.shields.io/badge/Java-21-blue.svg)](https://adoptium.net/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue.svg)](https://www.postgresql.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+A secure payment gateway web application built for learning and demonstration purposes.
 
-## 🏦 About The Project
+## 📌 Project Overview
 
-VaultPay is a production-ready, enterprise-grade payment gateway solution designed for 
-Indian businesses. It provides secure, scalable, and feature-rich payment processing 
-with built-in fraud detection.
+VaultPay is a full-stack web application that simulates a payment gateway. Users can register, login, add money to their wallet, send money to other users, withdraw money, and view transaction history. The system includes basic fraud detection rules and admin monitoring capabilities.
 
 ### ✨ Key Features
 
