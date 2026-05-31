@@ -25,4 +25,4 @@ with built-in fraud detection.
 | 2FA Security | 📋 | Google Authenticator ready |
 | Webhook System | 📋 | Merchant callback support |
 
-## 🏗️ Architecture
+
