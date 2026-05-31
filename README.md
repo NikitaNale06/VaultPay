@@ -26,3 +26,47 @@ VaultPay is a full-stack web application that simulates a payment gateway. Users
 | Webhook System | 📋 | Merchant callback support |
 
 
+
+## 🔧 Architecture Diagram Fix
+
+Architecture diagram text version (paste this directly):
+
+```text
+┌─────────────────────────────────────────────────────────┐
+│                    USER BROWSER                          │
+│                  (React Application)                     │
+│                     Port 5173                            │
+└─────────────────────┬───────────────────────────────────┘
+                      │ HTTPS/REST API
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│                 SPRING BOOT BACKEND                      │
+│                     Port 8081                            │
+│                                                          │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  Step 1: JWT Filter - Validates token          │   │
+│  └─────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  Step 2: Controller - Receives request         │   │
+│  └─────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  Step 3: Service - Business logic              │   │
+│  └─────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  Step 4: Repository - Database operations      │   │
+│  └─────────────────────────────────────────────────┘   │
+└─────────────────────┬───────────────────────────────────┘
+                      │ JDBC
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│                   POSTGRESQL DATABASE                    │
+│                     Port 5432                            │
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐   │
+│  │    users     │  │   accounts   │  │ transactions │   │
+│  │  - id        │  │  - id        │  │  - id        │   │
+│  │  - email     │  │  - user_id   │  │  - account_id│   │
+│  │  - password  │  │  - balance   │  │  - amount    │   │
+│  │  - role      │  │  - status    │  │  - type      │   │
+│  └──────────────┘  └──────────────┘  └──────────────┘   │
+└─────────────────────────────────────────────────────────┘
